@@ -1,0 +1,55 @@
+# ----------------------------------------
+# Node + TypeScript Project Template Ignore
+# ----------------------------------------
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# TypeScript cached output
+*.tsbuildinfo
+
+# Env files
+.env
+.env.*       # e.g., .env.development, .env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Coverage output
+coverage/
+
+# Optional: lockfiles (if you prefer yarn or pnpm only)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Optional: if using ts-node REPL history
+.ts-node-repl-history
+
+# Optional: if using Netlify locally
+.netlify/
+
+# Optional: if using local cache tools
+.cache/
+
+# Optional: if using Jest
+/jest-cache/
+/jest-debug/
+
