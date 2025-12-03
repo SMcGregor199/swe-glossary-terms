@@ -1,44 +1,47 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    /* ===========================
+       Project Structure
+    ============================ */
+    "rootDir": "./src",
+    "outDir": "./dist",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    /* ===========================
+       Node Environment (ESM)
+    ============================ */
+    "target": "ES2022",               // Compile to stable modern JS
+    "module": "NodeNext",             // Modern ESM support
+    "moduleResolution": "NodeNext",   // Node ESM import rules
+    "lib": ["ES2022"],                // Standard Node runtime lib
+    "types": ["node"],                // Enable Node globals
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
+    /* ===========================
+       Type Safety
+    ============================ */
     "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+
+    /* ===========================
+       Output Tools
+    ============================ */
+    "sourceMap": true,                // For debugging
+
+    /* ===========================
+       Module Rules
+    ============================ */
+    "verbatimModuleSyntax": true,     // Do not rewrite import/export
+    "isolatedModules": true,          // Good for build tools + ESM
+    "allowImportingTsExtensions": false, // Prevent `.ts` extension imports
+
+    /* ===========================
+       Useful Extras
+    ============================ */
+    "resolveJsonModule": true         // Allow: import config from "./config.json"
+  },
+
+  /* ===========================
+     File Inclusion
+  ============================ */
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
